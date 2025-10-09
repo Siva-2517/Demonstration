@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Landing Page</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Header Section */
+    .header, .hero, .footer {
+      background-color: #1F2937;
+      color: white;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 100px;
+    }
+
+    .header ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      margin: 0;
+      padding: 0;
+    }
+
+    .header a {
+      color: #E5E7EB;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    /* Hero Section */
+    .hero {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 100px;
+    }
+
+    .hero-text {
+      width: 45%;
+    }
+
+    .hero-text h1 {
+      font-size: 48px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .hero-text p {
+      color: #E5E7EB;
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+
+    .hero-text button {
+      background-color: #3882F6;
+      color: white;
+      border: none;
+      padding: 10px 25px;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .hero-image {
+      background-color: #6B7280;
+      width: 45%;
+      height: 200px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #E5E7EB;
+    }
+
+    /* Info Section */
+    .info {
+      text-align: center;
+      padding: 50px 100px;
+    }
+
+    .info h2 {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 30px;
+    }
+
+    .boxes {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    .box {
+      width: 150px;
+    }
+
+    .square {
+      border: 3px solid #3882F6;
+      border-radius: 10px;
+      height: 150px;
+      margin-bottom: 10px;
+    }
+
+    .box p {
+      font-size: 14px;
+      color: #6B7280;
+    }
+
+    /* Quote Section */
+    .quote {
+      background-color: #E5E7EB;
+      padding: 80px 200px;
+      font-size: 24px;
+      font-style: italic;
+      color: #1F2937;
+    }
+
+    .quote p {
+      margin: 0;
+    }
+
+    .quote span {
+      display: block;
+      text-align: right;
+      margin-top: 20px;
+      font-weight: bold;
+      font-style: normal;
+    }
+
+    /* Call to Action */
+    .cta {
+      background-color: #3882F6;
+      margin: 80px 150px;
+      border-radius: 8px;
+      color: white;
+      padding: 40px 80px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .cta button {
+      background: none;
+      border: 2px solid white;
+      border-radius: 8px;
+      color: white;
+      padding: 8px 25px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    /* Footer */
+    .footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      color: #E5E7EB;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <div class="header">
+    <div><strong>Header Logo</strong></div>
+    <ul>
+      <li><a href="#">header link one</a></li>
+      <li><a href="#">header link two</a></li>
+      <li><a href="#">header link three</a></li>
+    </ul>
+  </div>
+
+  <!-- Hero Section -->
+  <div class="hero">
+    <div class="hero-text">
+      <h1>This website is awesome</h1>
+      <p>This website has some subtext that goes here under the main title. It's a smaller font and the color is lower contrast.</p>
+      <button>Sign up</button>
+    </div>
+    <div class="hero-image">this is a placeholder for an image</div>
+  </div>
+
+  <!-- Info Section -->
+  <div class="info">
+    <h2>Some random information.</h2>
+    <div class="boxes">
+      <div class="box">
+        <div class="square"></div>
+        <p>this is some subtext under an illustration or image</p>
+      </div>
+      <div class="box">
+        <div class="square"></div>
+        <p>this is some subtext under an illustration or image</p>
+      </div>
+      <div class="box">
+        <div class="square"></div>
+        <p>this is some subtext under an illustration or image</p>
+      </div>
+      <div class="box">
+        <div class="square"></div>
+        <p>this is some subtext under an illustration or image</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Quote Section -->
+  <div class="quote">
+    <p>This is an inspiring quote, or a testimonial from a customer. Maybe it's just filling up space, or maybe people will actually read it. Who knows? All I know is that it looks nice.</p>
+    <span>-Thor, God of Thunder</span>
+  </div>
+
+  <!-- Call to Action -->
+  <div class="cta">
+    <div>
+      <h3>Call to action! It’s time!</h3>
+      <p>Sign up for our product by clicking that button right over there!</p>
+    </div>
+    <button>Sign up</button>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    Copyright © The Odin Project 2021
+  </div>
+</body>
+</html>

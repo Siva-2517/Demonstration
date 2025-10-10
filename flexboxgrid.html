@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grid Layout</title>
+  <style>
+    .container {
+      display: grid;
+      grid-template-columns: 1fr 2fr 2fr;
+      grid-template-rows: 60px 150px 150px 60px;
+      gap: 10px;
+      padding: 20px;
+      background-color: #faacac;
+    }
+
+    .head {
+      grid-column: 1 / 4; 
+      background-color: rgb(0, 255, 30);
+      border: 2px solid black;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: bold;
+    }
+
+    .side {
+      grid-row: 2 / 4; 
+      background-color: rgb(0, 255, 30);
+      border: 2px solid black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: bold;
+    }
+
+    .side2 {
+      grid-column: 2 / 3;
+      grid-row: 2 / 3;
+      background-color: rgb(0, 255, 30);
+      border: 2px solid black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: bold;
+    }
+
+    .side3 {
+      grid-column: 3 / 4;
+      grid-row: 2 / 3;
+      background-color: rgb(0, 255, 30);
+      border: 2px solid black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: bold;
+    }
+
+    .side4 {
+      grid-column: 2 / 4;
+      grid-row: 3 / 4;
+      background-color: rgb(0, 255, 30);
+      border: 2px solid black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: bold;
+    }
+
+    .foot {
+      grid-column: 1 / 4; 
+      background-color: rgb(0, 255, 30);
+      border: 2px solid black;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="head">Header</div>
+    <div class="side">Sidebar</div>
+    <div class="side2">Content 1</div>
+    <div class="side3">Content 2</div>
+    <div class="side4">Content 3</div>
+    <div class="foot">Footer</div>
+  </div>
+</body>
+</html>

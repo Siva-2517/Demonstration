@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chess game</title>
+</head>
+<body>
+    <div class="choice">
+        <button onclick="play('rock')">Rock</button>
+        <button onclick="play('paper')">Paper</button>
+        <button onclick="play('scissor')">Rock</button>
+    </div>
+    <div id="res"></div>
+    <script>
+        function play(user) {
+            const choices = ['rock','paper','scissor'];
+            const comput= choices[Math.floor(Math.random()*choices.length)];
+            let result='';
+            if (user===comput) {
+                result = 'It\'s a Draw!🤝';
+            } else if (
+                (user === 'rock' && comput === 'scissor') ||
+                (user === 'paper' && comput === 'rock') ||
+                (user === 'scissor' && comput === 'paper')
+            ) {
+                result = 'You win!🏆';
+            } else {
+                result = 'You lose!🤙';
+            }
+            document.getElementById('res').innerText = (
+            `You chose: ${user}\nComputer chose: ${comput}\n${result}`);
+        }
+    </script>
+</body>
+</html>

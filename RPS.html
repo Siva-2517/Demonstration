@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissor</title>
+    <style>/* -------------------- General Body -------------------- */
+body {
+    background: radial-gradient(circle at center, #0d0d0d 0%, #000000 100%);
+    color: #00fff7;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    text-align: center;
+    overflow: hidden;
+}
+
+/* -------------------- Futuristic Grid Background -------------------- */
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(#00fff7 1px, transparent 1px),
+                      linear-gradient(90deg, #00fff7 1px, transparent 1px);
+    background-size: 50px 50px;
+    opacity: 0.05;
+    pointer-events: none;
+}
+
+/* -------------------- Neon Heading -------------------- */
+h1 {
+    font-size: 3rem;
+    color: #ff00ff;
+    text-shadow: 0 0 5px #ff00ff, 0 0 15px #ff00ff, 0 0 30px #ff00ff;
+    margin-bottom: 50px;
+    animation: pulse 2s infinite alternate;
+}
+
+/* -------------------- Neon Buttons -------------------- */
+.choice {
+    margin-bottom: 40px;
+    z-index: 1;
+}
+
+button {
+    background: transparent;
+    border: 2px solid #00fff7;
+    color: #00fff7;
+    padding: 15px 30px;
+    margin: 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 5px #00fff7, 0 0 10px #00fff7, 0 0 20px #00fff7;
+    animation: pulse 2s infinite alternate;
+}
+
+button:hover {
+    color: #ff00ff;
+    border-color: #ff00ff;
+    box-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff, 0 0 40px #ff00ff;
+    transform: scale(1.1);
+}
+
+/* -------------------- Result Box -------------------- */
+#res {
+    background: rgba(0, 255, 247, 0.05);
+    border: 2px solid #00fff7;
+    border-radius: 15px;
+    padding: 20px 30px;
+    font-size: 1.3rem;
+    white-space: pre-line;
+    text-shadow: 0 0 5px #00fff7, 0 0 10px #00fff7, 0 0 20px #00fff7;
+    animation: pulse 2s infinite alternate;
+}
+
+/* -------------------- Pulse Animation -------------------- */
+@keyframes pulse {
+    0% {
+        text-shadow: 0 0 5px #00fff7, 0 0 10px #00fff7, 0 0 20px #00fff7;
+        box-shadow: 0 0 5px #00fff7, 0 0 10px #00fff7, 0 0 20px #00fff7;
+    }
+    100% {
+        text-shadow: 0 0 20px #ff00ff, 0 0 40px #ff00ff, 0 0 60px #ff00ff;
+        box-shadow: 0 0 20px #ff00ff, 0 0 40px #ff00ff, 0 0 60px #ff00ff;
+    }
+}
+button:active {
+    animation: neonClick 0.3s ease-in-out forwards;
+}
+
+@keyframes neonClick {
+    0% {
+        box-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff, 0 0 30px #ff00ff;
+        transform: scale(1.1);
+    }
+    50% {
+        box-shadow: 0 0 30px #00fff7, 0 0 60px #00fff7, 0 0 90px #00fff7;
+        transform: scale(1.15);
+    }
+    100% {
+        box-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff, 0 0 30px #ff00ff;
+        transform: scale(1.1);
+    }
+}
+
+</style>
+</head>
+<body>
+    <div class="choice">
+        <button onclick="play('rock')">Rock</button>
+        <button onclick="play('paper')">Paper</button>
+        <button onclick="play('scissor')">Rock</button>
+    </div>
+    <div id="res"></div>
+    <script>
+        function play(user) {
+            const choices = ['rock','paper','scissor'];
+            const comput= choices[Math.floor(Math.random()*choices.length)];
+            let result='';
+            if (user===comput) {
+                result = 'It\'s a Draw!🤝';
+            } else if (
+                (user === 'rock' && comput === 'scissor') ||
+                (user === 'paper' && comput === 'rock') ||
+                (user === 'scissor' && comput === 'paper')
+            ) {
+                result = 'You win!🏆';
+            } else {
+                result = 'You lose!🤙';
+            }
+            document.getElementById('res').innerText = (
+            `You chose: ${user}\nComputer chose: ${comput}\n${result}`);
+        }
+    </script>
+</body>
+</html>

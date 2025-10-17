@@ -1,0 +1,10 @@
+.link a {
+  margin-right: 20px;
+  text-decoration: none;
+  color: blue;
+  font-weight: bold;
+}
+
+.link a:hover {
+  color: darkblue;
+}

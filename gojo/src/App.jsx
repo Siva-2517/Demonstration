@@ -1,13 +1,28 @@
 import React from 'react'
-import User from './components/User'
+import Home from './pages/Home'
+import Contact from './pages/Contact'
+import About from './pages/About'
+import Services from './pages/Services'
+import Navbar from './components/Navbar'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 const App = () => {
   return (
+    <>
     <div>
-      App
-      <User name="Siva" dept="IT" age={20} 
-      skills={["Html", "Css", "Js", "Java", "MERN"]} />      
+      <Router>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/services" element={<Services />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
+    </Router>
     </div>
+    
+    
+      </>
   )
 }
 

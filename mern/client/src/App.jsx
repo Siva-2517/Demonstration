@@ -1,29 +1,31 @@
-import React from 'react'
+
+import { Route, Routes } from 'react-router'
 import Home from './pages/Home'
-import Contact from './pages/Contact'
 import About from './pages/About'
-import Services from './pages/Services'
-import Navbar from './components/Navbar'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Service from './pages/Service'
+import Contact from './pages/Contact'
+import Navbar from './component/Navbar'
+import Products from './pages/Products'
+import ProductDetails from './pages/ProductDetails'
+
 
 const App = () => {
   return (
     <>
-    <div>
-      <Router>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/services" element={<Services />} />
-        <Route path="/contact" element={<Contact />} />
-      </Routes>
-    </Router>
-    </div>      
-      </>
+    <Navbar/>
+    <Routes>
+
+      <Route path='/' element={<Home />}/>
+      <Route path='/about' element={<About />}/>
+      <Route path='/service' element={<Service />}/>
+      <Route path='/contact' element={<Contact />}/>
+      <Route path='/product' element={<Products />}/>
+      <Route path='/product/:id' element={<ProductDetails />}/>
+      
+    </Routes>
+    
+    </>
   )
 }
 
 export default App
-
-//rafce to create a component structure

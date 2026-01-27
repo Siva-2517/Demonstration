@@ -1,17 +1,18 @@
-import Prop from '../components/Prop'
-import Prop2 from '../components/Prop2'
+import React from 'react'
+import Profile from '../component/Profile'
+import State from '../hooks/State'
+import Form from '../hooks/Form'
+import Parent from '../component/Parent'
+
 const Home = () => {
-
-  return(
-  <>
-   <h2>🏠 Welcome to Home Page</h2>
-   <div>
-      App
-      <Prop name="Siva" dept="IT" age={20} 
-      skills={["Html", "Css", "Js", "Java", "MERN"]} /> 
-      <Prop2 year={3} cgpa={8.3} yoc="2027"/>     
-    </div>
-  </>
-)};
-
-export default Home;
+  return (
+    <>
+    <div>Welcome to the Home Page🏠</div> <br />
+    <Parent />
+    <Profile name="Siva" age={20} skills={["Html","Css","Js","Java"]} />
+    <State />
+    <Form />
+    </>
+  )
+}
+export default Home

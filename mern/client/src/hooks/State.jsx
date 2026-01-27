@@ -1,26 +1,22 @@
 import React from 'react'
 import { useState } from 'react'
-const State = () => {
-  const [count, setCount] = useState(0)
-  const [like, setLike] = useState(0)
-  const [dislike, setDislike] = useState(0)
 
+const State = () => {
+    const [c,setC]=useState(0)
+    const [li,setLi]=useState(0)
+    const [dli,setDli]=useState(0)
   return (
-    <>
     <div>
-      <h1>useState example</h1>
-      <h2>Count:{count}</h2>
-      <button onClick={() => setCount(count + 1)}>Increment</button>
-      <button onClick={() => setCount(count - 1)}>Decrement</button>
+        <h3>UseState example</h3>
+        <h3>Count : {c}</h3>
+        <button onClick={()=>setC(c+1)}>Increment</button>
+        <h3>Like Button</h3>
+        <h3>❤️:{li}</h3>
+        <button onClick={()=>setLi(li+1)}>Like</button>
+        <h3>Dis-Like Button</h3>
+        <h3>🖤:{dli}</h3>
+        <button onClick={()=>setDli(dli+1)}>Dis-Like</button>
     </div>
-    <div>
-        <h1>Like button</h1>
-        <h2>❤️:{like}</h2>
-        <button onClick={() => setLike(like + 1)}>Like</button>
-        <h2>🤍:{dislike}</h2>
-        <button onClick={() => setDislike(dislike + 1)}>Dislike</button>
-      </div>
-      </>
   )
 }
 

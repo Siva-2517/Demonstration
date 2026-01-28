@@ -1,5 +1,6 @@
-import React from 'react'
-import {useState} from 'react'
+import React, { use } from 'react'
+
+import {useEffect,useState} from 'react'
 const Form = () => {
     const [form,setForm]=useState({
         name:"",
@@ -18,6 +19,10 @@ const Form = () => {
         e.preventDefault()
         console.log(form);
     }
+
+    useEffect(()=>{ 
+        console.log("From UseEffect")
+      }     ,[])
 
   return (
     <div>
